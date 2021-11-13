@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085756700789",
+    "project_id": "placementportal-8a99b",
+    "storage_bucket": "placementportal-8a99b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085756700789:android:10290ac57cc328441c603c",
+        "android_client_info": {
+          "package_name": "com.college.placementportal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085756700789-lgt4j7ose0clm3sruk0os1231qo8oks9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1y7Qk6sVGo22RNRFs8nALmKOoNvscqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085756700789-lgt4j7ose0clm3sruk0os1231qo8oks9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
