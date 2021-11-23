@@ -17,6 +17,6 @@ public class UserDashboardActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        FirebaseAuth.getInstance().signOut();
+//        FirebaseAuth.getInstance().signOut();
     }
 }
