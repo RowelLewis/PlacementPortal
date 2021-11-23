@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.26313405797101447" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23143115942028986" />
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_user_dashboard.xml" value="0.33" />
       </map>
     </option>
   </component>

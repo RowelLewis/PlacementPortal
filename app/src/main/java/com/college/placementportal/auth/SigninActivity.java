@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.college.placementportal.R;
+import com.college.placementportal.activities.user.UserDashboardActivity;
 import com.college.placementportal.databinding.ActivitySigninBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -41,6 +42,11 @@ public class SigninActivity extends AppCompatActivity {
 
         //Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FirebaseAuth.getInstance().signOut();
     }
 
     @Override
@@ -110,12 +116,15 @@ public class SigninActivity extends AppCompatActivity {
 
     private void reload() {
         //redirect user to respective dashboard
-        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, UserDashboardActivity.class));
+        finish();
     }
 
     private void updateUI(FirebaseUser user) {
 
         Toast.makeText(getApplicationContext(), user.getEmail(), Toast.LENGTH_SHORT).show();
+        reload();
     }
 
 

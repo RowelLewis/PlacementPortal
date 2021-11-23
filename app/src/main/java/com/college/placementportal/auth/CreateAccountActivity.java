@@ -2,7 +2,9 @@ package com.college.placementportal.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.college.placementportal.R;
+import com.college.placementportal.activities.user.UserDashboardActivity;
 import com.college.placementportal.databinding.ActivityCreateAccountBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,6 +26,13 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     ActivityCreateAccountBinding binding;
     FirebaseAuth auth;
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FirebaseAuth.getInstance().signOut();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +50,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_create_account);
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_create_account);
 
         binding.create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,11 +88,13 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     private void reload() {
         //redirect user to respective dashboard
-        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, UserDashboardActivity.class));
+        finish();
     }
     private void updateUI(FirebaseUser user) {
-
         Toast.makeText(getApplicationContext(), user.getEmail(), Toast.LENGTH_SHORT).show();
+        reload();
     }
     private boolean validateEmail() {
 
