@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlacementPortal">
         <activity
+            android:name=".activities.user.UpdateProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.user.UserDashboardActivity"
             android:exported="true" />
         <activity
