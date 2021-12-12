@@ -15,9 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.college.placementportal.R;
+import com.college.placementportal.activities.admin.AdminDashboardActivity;
+import com.college.placementportal.activities.user.RegisterCompanyActivity;
 import com.college.placementportal.activities.user.UserDashboardActivity;
 import com.college.placementportal.databinding.ActivitySigninBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +36,9 @@ public class SigninActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private TextView signinView, forgotPass, createAcc;
+
+    private static final String adminEmail = "admin@gmail.com";
+    private static final String adminPassword = "admin123";
 
     ActivitySigninBinding binding;
 
@@ -92,6 +98,10 @@ public class SigninActivity extends AppCompatActivity {
 
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
+        if(adminEmail.equals(email) && adminPassword.equals(password)) {
+            startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
+            finish();
+        }
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -109,7 +119,17 @@ public class SigninActivity extends AppCompatActivity {
                             updateUI(null);
                         }
                     }
-                });
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                //test if this works
+                notifyUser(e.getLocalizedMessage());
+            }
+
+            private void notifyUser(String localizedMessage) {
+                Toast.makeText(SigninActivity.this, localizedMessage, Toast.LENGTH_SHORT).show();
+            }
+        });
         // [END sign_in_with_email]
     }
 

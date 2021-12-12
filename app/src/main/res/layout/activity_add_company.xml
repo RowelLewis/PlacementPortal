@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.admin.AddCompanyActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#FFD740"
+      tools:layout_editor_absoluteX="37dp"
+      tools:layout_editor_absoluteY="194dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="300dp"
+          android:layout_height="100dp"
+          android:layout_gravity="center"
+
+          >
+
+      </ImageView>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+
+          android:fontFamily="@font/bungee"
+          android:shadowColor="#2B1515"
+          android:text="Fill the company details"
+          android:textAlignment="center"
+          android:textColor="#070404"
+          android:textSize="30sp">
+
+      </TextView>
+
+      <EditText
+          android:layout_width="300dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:hint="Company name"
+          android:textAlignment="center" />
+
+
+      <EditText
+          android:layout_width="300dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:hint="Company description"
+
+          android:textAlignment="center" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:text="Dream option?"
+          android:textAlignment="center"
+
+          android:textSize="20dp"></CheckBox>
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:text="Super Dream option?"
+          android:textAlignment="center"
+          android:textSize="20dp"></CheckBox>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Select eligible branches"
+          android:textAlignment="center"
+          android:textColor="#070404"
+
+          android:textSize="24sp"
+
+
+          ></TextView>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+
+          android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CS"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="IS"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ECE"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="MECH"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BT"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CIVIL"
+            android:textAlignment="center"
+            android:textSize="20dp"></CheckBox>
+      </LinearLayout>
+
+      <EditText
+          android:layout_width="300dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:hint="CTC OFFERED"
+
+          android:textAlignment="center" />
+
+      <EditText
+          android:layout_width="300dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:hint="Min CGPA"
+
+          android:textAlignment="center" />
+
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Enter the company!"
+          android:textAlignment="center">
+
+
+      </Button>
+
+    </LinearLayout>
+  </ScrollView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

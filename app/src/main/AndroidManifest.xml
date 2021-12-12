@@ -10,10 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlacementPortal">
         <activity
-            android:name=".activities.user.UpdateProfileActivity"
+            android:name=".activities.user.InfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.ChangePasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.MyProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.RulesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.DisplayCompanyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.admin.AddCompanyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.admin.AdminDashboardActivity"
             android:exported="true" />
         <activity
             android:name=".activities.user.UserDashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.UpdateProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.user.RegisterCompanyActivity"
             android:exported="true" />
         <activity
             android:name=".auth.CreateAccountActivity"
@@ -33,6 +60,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

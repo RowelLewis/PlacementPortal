@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="10dp"
+    tools:context=".activities.DisplayCompanyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#E6EE"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="9dp"
+
+                tools:layout_editor_absoluteY="0dp">
+
+                <!--
+                In the above cardview widget
+                cardelevation property will give elevation to your card view
+                card corner radius will provide radius to your card view
+                card background color will give background color to your card view
+                card max elevation will give the cardview maximum elevation
+                card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+                card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
+                below are the two widgets imageview and text view we are displaying inside our card view.
+                -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Company name:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Company description:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Dream?"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Super dream?"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="CTC:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Min CGPA:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Register">
+
+                    </Button>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#E5A"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="9dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!--
+                In the above cardview widget
+                cardelevation property will give elevation to your card view
+                card corner radius will provide radius to your card view
+                card background color will give background color to your card view
+                card max elevation will give the cardview maximum elevation
+                card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+                card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
+                below are the two widgets imageview and text view we are displaying inside our card view.
+                -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Company name:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Company description:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Dream?"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Super dream?"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="CTC:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:paddingStart="10dp"
+                        android:shadowColor="#2B1515"
+                        android:text="Min CGPA:"
+                        android:textColor="#070404"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Register">
+
+                    </Button>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

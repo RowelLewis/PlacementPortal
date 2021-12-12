@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">PlacementPortal</string>
     <string name="title_activity_update_profile">UpdateProfileActivity</string>
-    <string name="personalDetails"><ol>
-        <li> Please Do Fill All Applicable Fields Carefully, And the same entered details will be forwarded to the Companies.</li>\n
-    <li> Try to fill bellow information using Desktop/Laptop, Because there are nearly 40+ Fields to Enter.</li>
-    <li> Registration and Update will be Enable only For few days, So Fill All the Fields at the Earliest.</li>
-    <li> Students are required to fill their 10th, 12th, Diploma and BE (semester wise,cgpa) marks without fail.</li>
-    <li> Do not round off the marks (For eg. 59.6% = 59.6% only and not 60%).</li>
-    <li> Students Who have attempted make up exams and have cleared the subject will be considered as history of backlogs.</li>
-    </ol></string>
+    <string name="personalDetails">
+        1) Please Do Fill All Applicable Fields Carefully, And the same entered details will be forwarded to the Companies.\n<li></li>
+    2) Try to fill bellow information using Desktop/Laptop, Because there are nearly 40+ Fields to Enter.\n<li></li>
+    3) Registration and Update will be Enable only For few days, So Fill All the Fields at the Earliest.\n<li></li>
+    4) Students are required to fill their 10th, 12th, Diploma and BE (semester wise,cgpa) marks without fail.\n<li></li>
+    5) Do not round off the marks (For eg. 59.6% = 59.6% only and not 60%).\n<li></li>
+    6) Students Who have attempted make up exams and have cleared the subject will be considered as history of backlogs.\n
+    </string>
     <string name="action_settings">Settings</string>
+    <string name="large_text">this is a problem</string>
 </resources>

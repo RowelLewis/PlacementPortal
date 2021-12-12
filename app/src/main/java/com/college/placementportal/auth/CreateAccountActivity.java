@@ -6,13 +6,12 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
 import com.college.placementportal.R;
-import com.college.placementportal.activities.user.UserDashboardActivity;
+import com.college.placementportal.activities.user.RegisterCompanyActivity;
 import com.college.placementportal.databinding.ActivityCreateAccountBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -89,7 +88,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     private void reload() {
         //redirect user to respective dashboard
 //        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, UserDashboardActivity.class));
+        startActivity(new Intent(this, RegisterCompanyActivity.class));
         finish();
     }
     private void updateUI(FirebaseUser user) {
