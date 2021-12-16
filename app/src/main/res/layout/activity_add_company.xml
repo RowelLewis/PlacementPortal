@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.admin.AddCompanyActivity">
-
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -23,11 +22,7 @@
           android:id="@+id/imageView"
           android:layout_width="300dp"
           android:layout_height="100dp"
-          android:layout_gravity="center"
-
-          >
-
-      </ImageView>
+          android:layout_gravity="center"/>
 
       <TextView
           android:layout_width="wrap_content"
@@ -181,5 +176,4 @@
 
     </LinearLayout>
   </ScrollView>
-
   </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,6 +49,7 @@ public class SigninActivity extends AppCompatActivity {
         //Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -102,6 +103,14 @@ public class SigninActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
             finish();
         }
+//        firebase.auth().onAuthStateChanged(authUser => {
+//            if(authUser.user.emailVerified){ //This will return true or false
+//    //            Toast.makeText(getApplicationContext(), "Email Verified", Toast.LENGTH_SHORT).show();
+//            }else{
+//                Toast.makeText(getApplicationContext(), "Email not verified.\nPlease verify email", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -110,13 +119,19 @@ public class SigninActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            if(!user.isEmailVerified()) {
+                                Toast.makeText(getApplicationContext(), "Please verify email before login", Toast.LENGTH_SHORT).show();
+                                signOut();
+                                finish();
+                            }
+                            startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(SigninActivity.this, "Authentication failed.",
+                            Toast.makeText(SigninActivity.this, task.getException().getMessage(),
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+//                            updateUI(null);
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -139,6 +154,11 @@ public class SigninActivity extends AppCompatActivity {
 //        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, UserDashboardActivity.class));
         finish();
+    }
+    public void signOut() {
+        // [START auth_sign_out]
+        mAuth.getInstance().signOut();
+        // [END auth_sign_out]
     }
 
     private void updateUI(FirebaseUser user) {

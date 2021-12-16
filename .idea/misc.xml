@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_book_content.xml" value="0.37447916666666664" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37447916666666664" />
         <entry key="app/src/main/res/drawable-v24/ic_profile.xml" value="0.37447916666666664" />
         <entry key="app/src/main/res/drawable-v24/ic_rules.xml" value="0.37447916666666664" />
         <entry key="app/src/main/res/drawable/calendar.xml" value="0.22552083333333334" />
@@ -18,9 +19,12 @@
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_display_company.xml" value="0.22192028985507245" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.26313405797101447" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/activity_info.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23143115942028986" />
+        <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/activity_register_company.xml" value="0.22192028985507245" />
+        <entry key="app/src/main/res/layout/activity_rules.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_user_dashboard.xml" value="0.33" />
