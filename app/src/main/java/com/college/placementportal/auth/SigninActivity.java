@@ -52,7 +52,7 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        FirebaseAuth.getInstance().signOut();
+//        FirebaseAuth.getInstance().signOut();
     }
 
     @Override
@@ -144,6 +144,7 @@ public class SigninActivity extends AppCompatActivity {
         //redirect user to respective dashboard
 //        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, UserDashboardActivity.class));
+
         finish();
     }
     public void signOut() {
@@ -157,8 +158,6 @@ public class SigninActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), user.getEmail(), Toast.LENGTH_SHORT).show();
         reload();
     }
-
-
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +

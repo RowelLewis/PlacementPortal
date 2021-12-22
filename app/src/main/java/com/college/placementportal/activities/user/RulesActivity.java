@@ -11,14 +11,11 @@ import com.college.placementportal.databinding.ActivityRulesBinding;
 
 public class RulesActivity extends AppCompatActivity {
 
-    ActivityRulesBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_rules);
 
-        binding.t1.setText(Html.fromHtml(("<h1>"+getString(R.string.rulesInfo)+"</h1>")));
     }
 }
