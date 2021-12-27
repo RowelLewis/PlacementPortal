@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.Html;
 
 import com.college.placementportal.R;
-import com.college.placementportal.databinding.ActivityRulesBinding;
 
 public class RulesActivity extends AppCompatActivity {
 

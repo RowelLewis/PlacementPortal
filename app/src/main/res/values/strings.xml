@@ -15,51 +15,48 @@
     <string name="rulesInfo">
         Read through carefully, discuss with faculty placement coordinators if necessary, before applying for placements.
     </string>
-    <string name="rulesCat1"><li>
-All students fulfilling the eligibility criteria of a specific company of their interest, may register and attend the processes even before the Large recruiters come in. Once selected, they remain there.</li>
-<li>
-Visit websites of the visiting companies, discuss with seniors working there and come ready to clarify their doubts.</li>
-<li>
+    <string name="rulesCat1">
+<li>\t
 Students are required to register well within the time stipulated, attend the Pre placement Talk as indicated, in time.</li>
-<li>
+<li>\t
 Utilise the opportunity of Pre placement talk to clarify every doubt pertaining to a company.</li>
-<li>
+<li>\t
 Present their queries in a mature and dignified manner courteously</li>
-<li>
+<li>\t
 Appear for selections by large recruiters only, if attempting Higher studies.</li>
-<li>
+<li>\t
 Everyone shall follow all the rules specified by the company on campus.</li>
-<li>
+<li>\t
 Eligible Students are permitted to answer placements with Large Recruiters till they get selected by two; however, within a week of their 2nd selection, they have to make a choice and submit their preference at Abhyuday.</li>
-<li>
+<li>\t
 Students who choose to do internships with companies, on getting selected for jobs, will stay with that organization that invests in their training. They have an obligation to join the organization on completing the internship.</li>
-<li>
+<li>\t
 Students selected by Large Recruiters only, can exercise the dream option provided they have a CGPA of 8.25</li>
-<li>
+<li>\t
 Students selected for a specific core job profile will stay with that organization.</li>
-<li>
+<li>\t
 Eligible students may attempt any number of dream/core companies till they get selected.</li>
-<li>
+<li>\t
 Students selected by a dream/core company may exercise the Super Dream option provided they have a CGPA of 8.25. To do so, they will have to clear the internal technical/coding assessment conducted by the Placement Department.</li>
-<li>
+<li>\t
 International placements are also considered as dream option</li>
 
-<li>
+<li>\t
 Non-placed students are free to utilise dream/Super dream options if they fulfil the eligibility criteria.</li>
-<li>
+<li>\t
 Students selected in placement drives meant for non-placed students only, will stay with that organization even if they have 8.25 CGPA.</li>
 <li>
 Any UG or PG student registering for placements and not attending the interview process, will be levied a penalty of Rs. 500/- and/or debarred from placements in college.</li>
-<li>
+<li>\t
 Students wanting to withdraw after registration, on account of some unavoidable reason, are required to inform, seek permission from the Placement Lead, with genuine reasons for likely absence well in advance, in writing or through email.</li>
 
-<li>
+<li>\t
 Students recruited by a dream/core company, have an obligation to work with that organization, failing which a penalty ranging from Rs.25,000/-one lakh will be levied and they will be debarred from placements in college.</li>
 
-<li>
+<li>\t
 Every identified act of indiscipline, be it stealing, cheating, rule breaking, ragging, offensive language, abuse of substances, acts of aggression, eve teasing, misuse of technology etc. would result in a student getting a ‘red dot’ against his/her name. Three such red dots disqualify a student from seeking placements in college.</li>
 
-<li>Last but very important, please note that a report of every misdemeanor, in the entire campus and outside from the first semester on wards , is linked to placements, be it in the hostel, examination hall, play ground or in buses.</li>
+<li>\tLast but very important, please note that a report of every misdemeanor, in the entire campus and outside from the first semester on wards , is linked to placements, be it in the hostel, examination hall, play ground or in buses.</li>
 
     </string>
     <string name="rulesCat2">
@@ -102,4 +99,25 @@ Ensure scrupulous behaviour by not signing for an absenting as this misdemeanor 
     </string-array>
     <string name="action_settings">Settings</string>
     <string name="large_text">this is a problem</string>
+
+    <string-array name="branches">
+        <item>Computer Science and Engineering</item>
+        <item>Information Science and Engineering</item>
+        <item>Electrical and Electronics Engineering</item>
+        <item>Electronics and Communication Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Artificial Intelligence and Machine Learning</item>
+        <item>Biotechnology Engineering </item>
+        <item>Robotics and Artificial Intelligence</item>
+        <item>Mechanical Engineering</item>
+        <item>Computer and Communication Engineering</item>
+    </string-array>
+
+    <string-array name="offer">
+        <item>DREAM</item>
+        <item>SUPER DREAM</item>
+        <item>SERVICE</item>
+        <item>CORE</item>
+    </string-array>
+    <string name="offer_prompt">Offer</string>
 </resources>

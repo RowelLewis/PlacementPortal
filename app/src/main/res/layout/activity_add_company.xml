@@ -6,174 +6,328 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.admin.AddCompanyActivity">
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="#FFD740"
-      tools:layout_editor_absoluteX="37dp"
-      tools:layout_editor_absoluteY="194dp">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="#FFD740"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="194dp">
 
-      <ImageView
-          android:id="@+id/imageView"
-          android:layout_width="300dp"
-          android:layout_height="100dp"
-          android:layout_gravity="center"/>
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-
-          android:fontFamily="@font/bungee"
-          android:shadowColor="#2B1515"
-          android:text="Fill the company details"
-          android:textAlignment="center"
-          android:textColor="#070404"
-          android:textSize="30sp">
-
-      </TextView>
-
-      <EditText
-          android:layout_width="300dp"
-          android:layout_height="50dp"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:hint="Company name"
-          android:textAlignment="center" />
-
-
-      <EditText
-          android:layout_width="300dp"
-          android:layout_height="50dp"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:hint="Company description"
-
-          android:textAlignment="center" />
-
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:text="Dream option?"
-          android:textAlignment="center"
-
-          android:textSize="20dp"></CheckBox>
-
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:text="Super Dream option?"
-          android:textAlignment="center"
-          android:textSize="20dp"></CheckBox>
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:text="Select eligible branches"
-          android:textAlignment="center"
-          android:textColor="#070404"
-
-          android:textSize="24sp"
-
-
-          ></TextView>
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-
-          android:orientation="horizontal">
-
-        <CheckBox
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="CS"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            tools:ignore="HardcodedText">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="IS"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"/>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="ECE"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="MECH"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
+                android:fontFamily="@font/bungee"
+                android:shadowColor="#2B1515"
+                android:text="Fill the company details"
+                android:textAlignment="center"
+                android:textColor="#070404"
+                android:textSize="30sp">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="BT"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
+            </TextView>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="CIVIL"
-            android:textAlignment="center"
-            android:textSize="20dp"></CheckBox>
-      </LinearLayout>
+<!--            <EditText-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:hint="Company name"-->
+<!--                android:textAlignment="center" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
 
-      <EditText
-          android:layout_width="300dp"
-          android:layout_height="50dp"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:hint="CTC OFFERED"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-          android:textAlignment="center" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Company Name">
 
-      <EditText
-          android:layout_width="300dp"
-          android:layout_height="50dp"
-          android:layout_gravity="center"
-          android:layout_marginBottom="20dp"
-          android:hint="Min CGPA"
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/comp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-          android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Company description">
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:text="Enter the company!"
-          android:textAlignment="center">
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/comp_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-      </Button>
+<!--            <EditText-->
+<!--                android:id="@+id/comp_desc"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
 
-    </LinearLayout>
-  </ScrollView>
-  </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                android:hint="Company description"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/dream_option"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:text="Dream option?"-->
+
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20dp"></CheckBox>-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/super_dream"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:text="Super Dream option?"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="20dp"></CheckBox>-->
+
+<!--                <MaterialSpinner-->
+<!--                    android:id="@+id/offerSpinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:entries="@array/offer"-->
+<!--                    android:prompt="@string/offer_prompt"-->
+<!--                    />-->
+
+<!--                <com.jaredrummler.materialspinner.MaterialSpinner-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:id="@+id/offerSpinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="32dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginEnd="32dp"-->
+<!--                    android:backgroundTint="@color/design_default_color_background"/>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp">
+
+                <!-- Inside text input layout add
+                      an auto complete text view
+                        and make its input type to none-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:hint="Choose type of offer"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                <!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="20dp"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    &lt;!&ndash; Inside text input layout add-->
+<!--                          an auto complete text view-->
+<!--                            and make its input type to none&ndash;&gt;-->
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/autoCompleteTextView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:inputType="none"-->
+<!--                        android:text="Choose Programming language"-->
+<!--                        />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginBottom="20dp"
+                      android:orientation="horizontal"
+                      android:layout_marginStart="32dp"
+                      android:layout_marginTop="30dp"
+                      android:layout_marginEnd="32dp">
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Select eligible branches"
+                          android:textAlignment="center"
+                          android:textColor="#070404"
+                          android:textSize="16dp" />
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_marginBottom="20dp"
+                          android:layout_marginLeft="15dp"
+                          android:orientation="vertical">
+
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/cs"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="CS" />
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/is"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="IS" />
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/ece"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="ECE" />
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/mech"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="MECH" />
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/bt"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="BT" />
+                          <com.google.android.material.checkbox.MaterialCheckBox
+                              android:id="@+id/civil"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="CIVIL" />
+                      </LinearLayout>
+                  </LinearLayout>
+
+<!--            <EditText-->
+<!--                android:id="@+id/ctc"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
+
+<!--                android:hint="CTC OFFERED"-->
+<!--                android:textAlignment="center" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:hint="CTC OFFERED">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ctc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <EditText-->
+<!--                android:id="@+id/cgpa"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp"-->
+
+<!--                android:hint="Min CGPA"-->
+<!--                android:textAlignment="center" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Min CGPA">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cgpa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Closing date (DD-MM-YYYY)">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/closingOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Enter the company!"
+                android:textAlignment="center"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

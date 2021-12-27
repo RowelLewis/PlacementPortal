@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
@@ -18,11 +19,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import java.util.regex.Pattern;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
+    private static final String TAG = "CreateAccountActivity";
     ActivityCreateAccountBinding binding;
     FirebaseAuth auth;
 
@@ -60,8 +63,42 @@ public class CreateAccountActivity extends AppCompatActivity {
                 }
             }
         });
-
+        binding.loginTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+            }
+        });
     }
+    private void verifyEmail(FirebaseUser user, String email) {
+        user.sendEmailVerification()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Email Sent", Toast.LENGTH_SHORT).show();
+                            signOut();
+                            startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+                        } else {
+                            Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            user.delete()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Log.d(TAG, "User account deleted. Due to invalid email");
+                                            }
+                                        }
+                                    });
+                        }
+                    }
+                });
+    }
+
+    private void signOut() {
+        auth.getInstance().signOut();
+    }
+
     private void createAccount(String email, String password) {
         // [START sign_in_with_email]
         auth.createUserWithEmailAndPassword(email, password)
@@ -72,7 +109,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
 //                            Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            updateUI(user);
+//                            updateUI(user);
+                            verifyEmail(user, email);
                         } else {
                             // If sign in fails, display a message to the user.
 //                            Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -88,7 +126,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     private void reload() {
         //redirect user to respective dashboard
 //        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, RegisterCompanyActivity.class));
+        startActivity(new Intent(this, SigninActivity.class));
         finish();
     }
     private void updateUI(FirebaseUser user) {

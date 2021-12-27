@@ -37,8 +37,8 @@ public class SigninActivity extends AppCompatActivity {
     private EditText password;
     private TextView signinView, forgotPass, createAcc;
 
-    private static final String adminEmail = "admin@gmail.com";
-    private static final String adminPassword = "admin123";
+    private static final String adminEmail = "testaxxount32@gmail.com";
+    private static final String adminPassword = "test123";
 
     ActivitySigninBinding binding;
 
@@ -52,8 +52,8 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        FirebaseAuth.getInstance().signOut();
     }
+
 
     @Override
     protected void onStart() {
@@ -98,10 +98,7 @@ public class SigninActivity extends AppCompatActivity {
 
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
-        if(adminEmail.equals(email) && adminPassword.equals(password)) {
-            startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
-            finish();
-        }
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -115,7 +112,12 @@ public class SigninActivity extends AppCompatActivity {
                                 signOut();
                                 finish();
                             }
-                            startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+                            if(adminEmail.equals(email) && adminPassword.equals(password)) {
+                                startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
+                                finish();
+                            }else {
+                                startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+                            }
                             finish();
                         } else {
                             // If sign in fails, display a message to the user.
@@ -143,7 +145,19 @@ public class SigninActivity extends AppCompatActivity {
     private void reload() {
         //redirect user to respective dashboard
 //        Toast.makeText(getApplicationContext(), "To be redirected to dashboard (Implementation coming soon....)", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, UserDashboardActivity.class));
+//        Intent intent = new Intent(this, UserDashboardActivity.class);
+
+//        String sendEmail=email.getText().toString();
+//        intent.putExtra("email", sendEmail);
+//
+//        FirebaseUser user = mAuth.getCurrentUser();
+//        String sendEmail=user.getEmail().toString();
+//        intent.putExtra("email", sendEmail);
+//        Toast.makeText(getApplicationContext(),sendEmail , Toast.LENGTH_SHORT).show();
+        if(mAuth.getCurrentUser().getEmail().equals("testaxxount32@gmail.com"))
+            startActivity(new Intent(this, AdminDashboardActivity.class));
+        else
+            startActivity(new Intent(this, UserDashboardActivity.class));
 
         finish();
     }

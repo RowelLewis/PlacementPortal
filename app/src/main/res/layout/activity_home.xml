@@ -1,9 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.user.HomeActivity">
+<layout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.user.HomeActivity">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bg" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Welcome to NMAMIT Placement Portal"
+                                android:textAlignment="center"
+                                android:textColor="#24527C"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addProDet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Please add profile details in My Profile Section"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="#FFFF00"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="My Profile"
+                android:textColor="#24527C"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingRight="@dimen/ms__padding_left"
+                        android:paddingBottom="10dp"
+                        android:text="Name"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp"
+                        android:text="Branch"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/branch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Email"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Phone Number"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp"
+                        android:text="Gender"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="DateofBirth"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Address"
+                        android:textColor="#24527C" />
+
+                    <TextView
+                        android:id="@+id/permanentAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#24527C" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

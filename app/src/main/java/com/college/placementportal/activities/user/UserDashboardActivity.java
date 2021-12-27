@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.college.placementportal.R;
+import com.college.placementportal.activities.DisplayCompanyActivity;
 import com.college.placementportal.auth.SigninActivity;
 import com.college.placementportal.databinding.ActivityUserDashboardBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,11 +20,14 @@ public class UserDashboardActivity extends AppCompatActivity {
 
     ActivityUserDashboardBinding binding;
     private FirebaseAuth auth;
+    String email;//passed over from intent
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setHasOptionsMenu(true);
+        Intent intent = getIntent();
+        email= intent.getStringExtra("email");
     }
 
     @Override
@@ -58,12 +62,15 @@ public class UserDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), MyProfileActivity.class));
+//                Intent intent = new Intent(getApplicationContext(), MyProfileActivity.class);
+//                intent.putExtra("email", email);
+//                startActivity(intent);
             }
         });
         binding.registercompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), RegisterCompanyActivity.class));
+                startActivity(new Intent(getApplicationContext(), DisplayCompanyActivity.class));
             }
         });
         binding.changepassword.setOnClickListener(new View.OnClickListener() {
